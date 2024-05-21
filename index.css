@@ -1,0 +1,138 @@
+*,
+::before,
+::after {
+  box-sizing: border-box; /* 1 */
+  border-width: 0; /* 2 */
+  border-style: solid; /* 2 */
+}
+
+body, 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6, 
+p,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  min-height: 100vh;
+}
+ul.ulcontainer{
+ padding:1rem;
+ list-style-type: none;
+ line-height: 1.5rem;
+ background-color: aliceblue;
+ border-radius: 1rem;
+ transition: 0.3s;
+ width: 13rem;
+}
+
+ul.ulcontainer:hover{
+  transform: scale(1.12);
+  cursor: pointer;
+}
+
+.form-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 2rem 1rem 1rem 1rem;
+  color: aliceblue;
+  background: #0f0c29;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #24243e, #302b63, #0f0c29); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  width: 100%;
+  gap: 2rem;
+}
+
+#search{
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  width: 15rem;
+}
+
+.imgclima{
+  width: 4rem;
+  height: 4rem;
+}
+li{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+h2{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: aliceblue;
+}
+h1{
+  color: aliceblue;
+}
+.container{
+  background: #0f0c29;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #24243e, #302b63, #0f0c29); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: start;
+  width: 100%;
+  gap: 1rem;
+  position: fixed;
+  height: 76%;
+  overflow: scroll;
+  padding-top: 2rem;
+}
+h3{
+  font-size: 1rem;
+}
+li > img{
+  height: 8rem;
+  width: 10rem;
+}
+
+@media(min-width: 768px){
+ 
+  ul.ulcontainer{
+    width: 16rem;
+  }
+  li > img{
+  height: 10rem;
+  width: 14rem;
+  }
+}
+
+@media(min-width: 1024px){
+  
+  h3{
+    font-size: 1.5rem;
+  }
+  ul.ulcontainer{
+    gap: 2rem;
+    line-height: 2rem;
+  }
+  h1{
+    font-size: 2.5rem;
+  }
+}
+
+@media(min-width: 1440px){
+
+  .container{
+    padding: 2rem;
+  }
+  #search{
+    font-size: 1.5rem;
+  }
+  h1{
+    font-size: 2.8rem;
+  }
+}
