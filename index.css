@@ -102,7 +102,7 @@ li > img{
 @media(min-width: 768px){
  
   ul.ulcontainer{
-    width: 16rem;
+    width: 18rem;
   }
   li > img{
   height: 10rem;
