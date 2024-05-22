@@ -28,7 +28,7 @@ searchInput.addEventListener('keyup', async e => {
 
   // Toda la logica del desafio va dentro del evento del input.
   if(searchInput.value !== ''){
-  const newCountries = countries.filter(countri => countri.name.common.toLowerCase().slice(0, 10).includes(searchInput.value.toLowerCase()))
+  const newCountries = countries.filter(countri => countri.name.common.toLowerCase().slice(0, 20).includes(searchInput.value.toLowerCase()))
   
   if(newCountries.length > 10){
     container.innerHTML = `<h2>Debe ser mas especifico en la busqueda</h2>`
@@ -51,11 +51,11 @@ searchInput.addEventListener('keyup', async e => {
         <li><img src=" ${newCountries[0].flags.svg}" flag"></li>
         <li><h3>Nombre: ${newCountries[0].name.common}</h3></li>
         <li><h3>Capital: ${newCountries[0].capital}</h3></li>
-        <li><h3>Habitantes: ${newCountries[0].population}</h3></li>
+        <li><h3>Habitantes: ${newCountries[0].population.toLocaleString()}</h3></li>
         <li><h3>Continente: ${newCountries[0].region}</h3></li>
         <li><img class="imgclima" src="https://openweathermap.org/img/wn/${datosclima.weather[0].icon}@2x.png"></li>
-        <li><h3>Temp: ${datosclima.main.temp} Cº</h3></li>
         <li><h3>Clima: ${datosclima.weather[0].description}</h3></li>
+        <li><h3>Temp: ${datosclima.main.temp} Cº</h3></li>
         </ul>` 
         container.innerHTML = createCountriItems2HTML;
         return
