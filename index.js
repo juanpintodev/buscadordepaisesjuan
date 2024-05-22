@@ -53,6 +53,7 @@ searchInput.addEventListener('keyup', async e => {
         <li><h3>Capital: ${newCountries[0].capital}</h3></li>
         <li><h3>Habitantes: ${newCountries[0].population.toLocaleString()}</h3></li>
         <li><h3>Continente: ${newCountries[0].region}</h3></li>
+        <li><h3>Continente: ${newCountries[0].timezones[0]}</h3></li>
         <li><img class="imgclima" src="https://openweathermap.org/img/wn/${datosclima.weather[0].icon}@2x.png"></li>
         <li><h3>Clima: ${datosclima.weather[0].description}</h3></li>
         <li><h3>Temp: ${datosclima.main.temp} Cº</h3></li>
