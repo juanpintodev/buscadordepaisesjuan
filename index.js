@@ -51,7 +51,7 @@ searchInput.addEventListener('keyup', async e => {
         <li><img src=" ${newCountries[0].flags.svg}" flag"></li>
         <li><h3>Nombre: ${newCountries[0].name.common}</h3></li>
         <li><h3>Capital: ${newCountries[0].capital}</h3></li>
-        <li><h3>Habitantes: ${newCountries[0].population.toLocaleString()}</h3></li>
+        <li><h3>Habitantes: ${newCountries[0].population.toLocaleString("es-ES")}</h3></li>
         <li><h3>Continente: ${newCountries[0].region}</h3></li>
         <li><h3>Continente: ${newCountries[0].timezones[0]}</h3></li>
         <li><img class="imgclima" src="https://openweathermap.org/img/wn/${datosclima.weather[0].icon}@2x.png"></li>
