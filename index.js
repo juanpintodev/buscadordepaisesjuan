@@ -28,7 +28,7 @@ searchInput.addEventListener('keyup', async e => {
 
   // Toda la logica del desafio va dentro del evento del input.
   if(searchInput.value !== ''){
-  const newCountries = countries.filter(countri => countri.name.common.toLowerCase().slice(0, 20).includes(searchInput.value.toLowerCase()))
+  const newCountries = countries.filter(countri => countri.name.common.toLowerCase().slice(0, 20).startsWith(searchInput.value.toLowerCase()))
   
   if(newCountries.length > 10){
     container.innerHTML = `<h2>Debe ser mas especifico en la busqueda</h2>`
